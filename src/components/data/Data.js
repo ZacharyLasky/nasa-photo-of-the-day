@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from 'axios'; 
+import Card from '../card/Card'
 
 export default function Data(props) {
 
@@ -17,12 +18,6 @@ export default function Data(props) {
   }, [])
 
   return (
-     <div>
-      <div>{data.title}</div>
-      <img src={data.url} alt="nasa of the day"></img>
-      <div>{data.explanation}</div>
-      <div>{data.date}</div>
-      <div>{data.copyright}</div>
-    </div>
+     <Card data={data}></Card>
   )
 }
