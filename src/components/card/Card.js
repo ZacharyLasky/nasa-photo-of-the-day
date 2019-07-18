@@ -21,13 +21,13 @@ export default function Card(props) {
     return (
       <CardContainerDiv>
         
-        <TitleDiv>
-          <TitleH1>{data.title}</TitleH1>
-        </TitleDiv>
-
         <DateDiv>
           <h2>NASA Daily Images: Todays's date ---> {data.date}</h2>
         </DateDiv>
+
+        <TitleDiv>
+          <TitleH1>{data.title}</TitleH1>
+        </TitleDiv>
 
         <ImgDiv>
           <img src={data.url} alt="nasa daily" width="100%"></img>
