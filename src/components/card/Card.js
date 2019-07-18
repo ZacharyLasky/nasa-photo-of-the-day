@@ -3,6 +3,11 @@ import styled from 'styled-components';
 
 const TitleDiv = styled.div`display: flex; justify-content: center;`;
 const DateDiv = styled.div`display: flex; justify-content: center;`;
+const ImgDiv = styled.div`display: flex; justify-content: center;`;
+const ExplanationDiv = styled.div`display: flex; justify-content: center;`;
+
+const LimeH1 = styled.h1`color: #bae123`;
+
 
 export default function Card(props) {
   const data = props.dataProps;
@@ -10,20 +15,20 @@ export default function Card(props) {
       <div className="card-container">
         
         <TitleDiv>
-          <h1>{data.title}</h1>
+          <LimeH1>{data.title}</LimeH1>
         </TitleDiv>
 
         <DateDiv>
           <h2>{data.date}</h2>
         </DateDiv>
 
-        <div className="img-container">
+        <ImgDiv>
           <img src={data.url} alt="nasa image of the day"></img>
-        </div>
+        </ImgDiv>
           
-        <div className="explanation-container">
+        <ExplanationDiv>
           <h3>{data.explanation}</h3>
-        </div>
+        </ExplanationDiv>
       
       </div>
     )
